@@ -2,6 +2,7 @@ import "./BurgerSection.css"
 import React from "react";
 import {IngredientsAll} from "../../types";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
+import BurgerPrice from "./BurgerPrice/BurgerPrice";
 
 interface Props{
     ingredients:IngredientsAll[];
@@ -23,7 +24,11 @@ const BurgerSection:React.FC<Props> = ({price, ingredients}) => {
                 ))}
                 <div className="BreadBottom"></div>
             </div>
-            <strong>Price: {price}</strong>
+            <div className="d-flex justify-content-center">
+                <BurgerPrice
+                    price={price}
+                />
+            </div>
         </div>
     );
 };
