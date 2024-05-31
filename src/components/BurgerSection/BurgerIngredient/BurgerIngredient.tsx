@@ -2,7 +2,7 @@ import {IngredientsAll} from "../../../types";
 
 
 interface Props{
-    ingredient:IngredientsAll
+    ingredient:IngredientsAll;
 }
 const BurgerIngredient:React.FC<Props> = ({ingredient}) => {
     return (

@@ -1,11 +1,11 @@
-import {IngredientsAll} from "../../types";
+import {IngredientsAll} from "../../../types";
 import React from "react";
-import "./Ingredients.css"
+import "./Ingredients.css";
 
 interface Props {
-    ingredients: IngredientsAll
-    onClickAddIngredient: (value:IngredientsAll) =>void
-    onClickReduceIngredient:(value:IngredientsAll)=>void
+    ingredients: IngredientsAll;
+    onClickAddIngredient: (value:IngredientsAll) =>void;
+    onClickReduceIngredient:(value:IngredientsAll)=>void;
 }
 
 const Ingredients:React.FC<Props> = ({ingredients, onClickAddIngredient, onClickReduceIngredient}) => {

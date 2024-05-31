@@ -4,8 +4,8 @@ import {IngredientsAll} from "../../types";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
 interface Props{
-    ingredients:IngredientsAll[]
-    price:number
+    ingredients:IngredientsAll[];
+    price:number;
 }
 const BurgerSection:React.FC<Props> = ({price, ingredients}) => {
     return (

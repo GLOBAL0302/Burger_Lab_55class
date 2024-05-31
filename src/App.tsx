@@ -1,9 +1,9 @@
-import './App.css'
+import './App.css';
 import React from "react";
 import {meatIngredient, baconIngredient, cheeseIngredient, lettuceIngredient} from "./Allingredients";
 import {IngredientsAll} from "./types";
-import Ingredients from "./components/Ingredients/Ingredients";
 import BurgerSection from "./components/BurgerSection/BurgerSection";
+import RenderIngredients from "./components/RenderIngredients/RenderIngredients";
 
 function App() {
     const [ingredients, setIngredients]= React.useState<IngredientsAll[]>([
@@ -22,7 +22,7 @@ function App() {
                         count: value.count + 1
                     }
                 }
-                return item
+                return item;
             })
         })
     }
@@ -36,25 +36,23 @@ function App() {
                         count: value.count > 0? value.count - 1: 0
                     }
                 }
-                return item
+                return item;
             })
         })
     }
 
     const price = ingredients.reduce((acc, elem)=>{
-        return acc + (elem.count * elem.name.price)
-    },30)
+        return acc + (elem.count * elem.name.price);
+    },30);
     return (
         <>
             <div className="wrapper border border-5 p-4 d-flex">
                 <div style={{width:"60%"}}>
-                    {ingredients.map(ingredient=>(
-                        <Ingredients
-                            key={Math.random().toString()}
-                            ingredients = {ingredient}
-                            onClickAddIngredient = {onClickAddIngredient}
-                            onClickReduceIngredient={onClickReduceIngredient}/>
-                    ))}
+                    <RenderIngredients
+                        ingredients={ingredients}
+                        onClickAddIngredient={onClickAddIngredient}
+                        onClickReduceIngredient={onClickReduceIngredient}
+                    />
                 </div>
                 <div className='burgerSection d-flex align-items-center' style={{width:"40%"}}>
                     <BurgerSection
