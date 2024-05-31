@@ -50,7 +50,7 @@ function App() {
                 <div style={{width:"60%"}}>
                     {ingredients.map(ingredient=>(
                         <Ingredients
-                            key={ingredient.name.name}
+                            key={Math.random().toString()}
                             ingredients = {ingredient}
                             onClickAddIngredient = {onClickAddIngredient}
                             onClickReduceIngredient={onClickReduceIngredient}/>
@@ -58,6 +58,7 @@ function App() {
                 </div>
                 <div className='burgerSection d-flex align-items-center' style={{width:"40%"}}>
                     <BurgerSection
+                        key={Math.random().toString()}
                         ingredients={ingredients}
                         price={price}
                     />

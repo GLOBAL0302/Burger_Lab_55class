@@ -18,7 +18,7 @@ const BurgerSection:React.FC<Props> = ({price, ingredients}) => {
                 </div>
                 {ingredients.map(ingredient=>(
                     <BurgerIngredient
-                        key={ingredient.name.name}
+                        key={Math.random().toString()}
                         ingredient={ingredient}/>
                 ))}
                 <div className="BreadBottom"></div>

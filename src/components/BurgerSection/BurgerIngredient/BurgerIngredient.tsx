@@ -5,10 +5,10 @@ interface Props{
     ingredient:IngredientsAll
 }
 const BurgerIngredient:React.FC<Props> = ({ingredient}) => {
-
     return (
-        <div className={ingredient.name.name}>
-        </div>
+        <>
+            {new Array(ingredient.count).fill(<div key={Math.random().toString()} className={ingredient.name.name}></div>)}
+        </>
     );
 };
 
