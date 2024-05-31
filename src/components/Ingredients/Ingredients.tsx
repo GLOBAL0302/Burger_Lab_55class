@@ -1,5 +1,6 @@
 import {IngredientsAll} from "../../types";
 import React from "react";
+import "./Ingredients.css"
 
 interface Props {
     ingredients: IngredientsAll

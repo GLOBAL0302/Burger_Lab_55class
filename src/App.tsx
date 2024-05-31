@@ -40,6 +40,10 @@ function App() {
             })
         })
     }
+
+    const price = ingredients.reduce((acc, elem)=>{
+        return acc + (elem.count * elem.name.price)
+    },30)
     return (
         <>
             <div className="wrapper border border-5 p-4 d-flex">
@@ -53,7 +57,10 @@ function App() {
                     ))}
                 </div>
                 <div className='burgerSection d-flex align-items-center' style={{width:"40%"}}>
-                    <BurgerSection/>
+                    <BurgerSection
+                        ingredients={ingredients}
+                        price={price}
+                    />
                 </div>
             </div>
         </>
